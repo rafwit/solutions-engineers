@@ -15,3 +15,4 @@ We do not expect reading code here.
 * What are the benefits of using Typescript?
 * Describe with your own words a web socket?
 * Describe with your own words a GraphQL API.
+* How do you keep yourself up-to-date in regards the technologies you do use?

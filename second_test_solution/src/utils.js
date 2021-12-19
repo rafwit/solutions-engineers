@@ -1,10 +1,9 @@
 const { logger } = require('./logger');
 
-function logIncomingRequest(req) {
+function logIncomingRequestInfo(req) {
   logger.info(
-    `Incoming request to ${req.path}\n
-    query: ${JSON.stringify(req.query)}`
+    `Incoming request to ${req.path} with query: ${JSON.stringify(req.query)}`
   );
 }
 
-module.exports = { logIncomingRequest };
+module.exports = { logIncomingRequestInfo };

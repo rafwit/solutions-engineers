@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const { logger } = require('./logger');
 const {
-  ROUTES: { HOME, ESCAPE },
+  ROUTES: { HOME, ESCAPE, COURIERS, LOOKUP },
 } = require('./constants');
 const { authenticate } = require('./controllers/authenticate');
 const { logIncomingRequest } = require('./utils');
+const {
+  createOrUpdateCourier,
+} = require('./controllers/create-or-update-courier');
 
 router.all(ESCAPE, (req, res, next) => {
   logIncomingRequest(req);
@@ -13,6 +16,17 @@ router.all(ESCAPE, (req, res, next) => {
 
 router.get(HOME, (req, res) => {
   res.send('Hello World!');
+});
+
+router.get(LOOKUP, (req, res) => {
+  res.send(COURIERS);
+});
+
+router.post(COURIERS, createOrUpdateCourier);
+router.put(COURIERS, createOrUpdateCourier);
+
+router.delete(LOOKUP, (req, res) => {
+  res.send(LOOKUP);
 });
 
 router.all(ESCAPE, (req, res) => {

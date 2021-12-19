@@ -1,5 +1,5 @@
 const express = require('express');
-const { connect: connectToDataBase } = require('./db/methods');
+const { connectToDataBase } = require('./db/methods');
 const { router } = require('./router');
 const { logger } = require('./logger');
 const {

@@ -2,13 +2,13 @@
   "name": "solution-to-second-test-at-stuart",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "second_test_solution/src/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "LOG_PRETTY=true LOG_LEVEL=warn jest",
     "lint": "eslint .",
     "prepare": "husky install",
-    "dev": "nodemon src/index.js",
-    "start": "node src/index.js"
+    "dev": "LOG_PRETTY=true LOG_LEVEL=debug nodemon second_test_solution/src/index.js",
+    "start": "node second_test_solution/src/index.js"
   },
   "keywords": [],
   "author": "Rafał Witczak <rwitczak89@gmail.com>",

@@ -3,6 +3,8 @@ module.exports = {
   ROUTES: {
     HOME: '/',
     ESCAPE: '*',
+    COURIERS: '/couriers',
+    LOOKUP: '/couriers/lookup',
   },
   BASE_URLS: {
     LOCAL: 'http://localhost',
@@ -12,5 +14,9 @@ module.exports = {
   ALLOWED_USERS: {
     STUART_API: 'stuart_api',
     DISPATCHER: 'dispatcher',
+  },
+  PROPERTIES_TO_DELETE: {
+    MONGO_ID: '_id',
+    MONGOOSE_FLAG: '__v',
   },
 };

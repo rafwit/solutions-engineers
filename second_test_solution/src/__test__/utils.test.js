@@ -7,13 +7,14 @@ describe('logIncomingRequestInfo', () => {
     const req = {
       path: '/couriers/lookup',
       query: { capacity_required: 45 },
+      method: 'GET',
     };
 
     logIncomingRequestInfo(req);
 
     expect(spy).toHaveBeenCalled();
     expect(spy).toHaveBeenCalledWith(
-      'Incoming request to /couriers/lookup with query: {"capacity_required":45}'
+      'Incoming request, method: GET, path: /couriers/lookup with query: {"capacity_required":45}'
     );
   });
 });

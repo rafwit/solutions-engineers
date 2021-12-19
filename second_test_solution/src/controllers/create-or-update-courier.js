@@ -6,8 +6,7 @@ async function createOrUpdateCourier(req, res, next) {
 
   try {
     const result = await createOrUpdateCourierInDataBase(id, max_capacity);
-
-    res.status(`${req.method === 'POST' ? 201 : 200}`).send(result);
+    res.status(req.method === 'POST' ? 201 : 200).send(result);
   } catch (error) {
     next(error);
   }

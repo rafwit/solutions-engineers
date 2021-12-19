@@ -11,9 +11,7 @@ async function updateCourierAvailableCapacity(req, res, next) {
       res
         .status(404)
         .send({ message: `Requested courier with id: ${id} not found` });
-    }
-
-    if (result.not_possible) {
+    } else if (result.not_possible) {
       res.status(409).send({
         message: `Unable to update load for courier with id: ${id} - max capacity exceeded`,
       });

@@ -27,7 +27,7 @@ describe('createOrUpdateCourier', () => {
       expect(res.send).toHaveBeenCalled();
       expect(res.send).toHaveBeenCalledWith({ id: 123, max_capacity: 666 });
       expect(res.status).toHaveBeenCalled();
-      expect(res.status).toHaveBeenCalledWith('201');
+      expect(res.status).toHaveBeenCalledWith(201);
     });
   });
 });

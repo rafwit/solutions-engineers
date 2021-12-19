@@ -45,7 +45,6 @@ async function getCouriersWithMinCapacity(expectedCapacity) {
 
 async function updateCourierCapacity(id, newLoad) {
   const courier = await Courier.findOne({ id });
-
   if (!courier) {
     return { not_found: true };
   }

@@ -8,6 +8,7 @@ const {
 const courierSchema = mongoose.Schema({
   id: Number,
   max_capacity: Number,
+  current_load: { type: Number, required: false },
 });
 
 courierSchema.set('toJSON', {

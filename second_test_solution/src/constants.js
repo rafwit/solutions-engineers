@@ -5,6 +5,7 @@ module.exports = {
     ESCAPE: '*',
     COURIERS: '/couriers',
     LOOKUP: '/couriers/lookup',
+    LOAD_UPDATE: '/courier/:id/update',
   },
   BASE_URLS: {
     LOCAL: 'http://localhost',

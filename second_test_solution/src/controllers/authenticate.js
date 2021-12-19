@@ -15,12 +15,14 @@ async function authenticate(request, response, next) {
       code: 401,
       message: `User not allowed`,
     });
+
     logger.error(
       authenticationError,
       `Error authenticating user, received header: ${request.headers.user}`
     );
+
     response.status(401);
-    response.send('Unauthorized');
+    response.send({ message: 'Unauthorized user' });
   } else {
     logger.info(`User authenticated as ${userHeader.user}`);
     next();

@@ -4,7 +4,7 @@
   "description": "",
   "main": "second_test_solution/src/index.js",
   "scripts": {
-    "test": "LOG_PRETTY=true LOG_LEVEL=warn jest",
+    "test": "LOG_PRETTY=true LOG_LEVEL=warn jest --verbose --detectOpenHandles --forceExit",
     "lint": "eslint .",
     "prepare": "husky install",
     "dev": "LOG_PRETTY=true LOG_LEVEL=debug nodemon second_test_solution/src/index.js",

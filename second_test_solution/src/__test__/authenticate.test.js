@@ -97,7 +97,7 @@ describe('authenticate', () => {
 
       expect.assertions(2);
       expect(res.status).toHaveBeenCalledWith(401);
-      expect(res.send).toHaveBeenCalledWith('Unauthorized');
+      expect(res.send).toHaveBeenCalledWith({ message: 'Unauthorized user' });
     });
   });
 });

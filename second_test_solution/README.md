@@ -47,24 +47,24 @@ Methods:
   - Request body:
   ```json
   {
-    "id": Number (required),
-    "max_capacity": Number (required)
+    "id": "Number (required)",
+    "max_capacity": "Number (required)"
   }
   ```
   - Response body:
   ```json
   {
-    "id": Number,
-    "max_capacity": Number
+    "id": "Number",
+    "max_capacity": "Number"
   }
   ```
   - Status: 200 or 201
 - DELETE
   - Request body:
   ```json
-    {
-      "id": Number (required)
-    }
+  {
+    "id": "Number (required)"
+  }
   ```
   - Response body - empty
   - Status: 200 or 204
@@ -79,9 +79,9 @@ Methods:
   - Response body:
   ```json
   {
-    "id": Number,
-    "max_capacity": Number,
-    "current_load": Number (optional)
+    "id": "Number",
+    "max_capacity": "Number",
+    "current_load": "Number (optional)"
   }
   ```
 
@@ -92,15 +92,15 @@ Methods:
   - Request body:
   ```json
   {
-    "current_load": Number
+    "current_load": "Number"
   }
   ```
   - Response body:
   ```json
   {
-    "id": Number,
-    "max_capacity": Number,
-    "current_load": Number
+    "id": "Number",
+    "max_capacity": "Number",
+    "current_load": "Number"
   }
   ```
 

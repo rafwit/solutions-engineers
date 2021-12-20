@@ -6,11 +6,12 @@ const {
 } = require('../constants');
 
 const courierSchema = mongoose.Schema({
-  id: Number,
-  max_capacity: Number,
+  id: { type: Number, required: true },
+  max_capacity: { type: Number, required: true },
   current_load: { type: Number, required: false },
 });
 
+// allows to not sending __v and_id mongoose properties back to the client
 courierSchema.set('toJSON', {
   transform(_, ret) {
     delete ret[MONGO_ID];

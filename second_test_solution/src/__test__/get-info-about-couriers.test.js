@@ -15,7 +15,7 @@ describe('getInfoAboutCouriers', () => {
       status: jest.fn(() => res).mockName('status'),
     };
 
-    const expected = { id: 123, max_capacity: 666 };
+    const expected = [{ id: 123, max_capacity: 666, current_load: 15 }];
 
     Courier.find = jest.fn();
     Courier.find.mockResolvedValue(expected);
@@ -24,7 +24,7 @@ describe('getInfoAboutCouriers', () => {
 
     expect.assertions(4);
     expect(res.send).toHaveBeenCalled();
-    expect(res.send).toHaveBeenCalledWith({ id: 123, max_capacity: 666 });
+    expect(res.send).toHaveBeenCalledWith(expected);
     expect(res.status).toHaveBeenCalled();
     expect(res.status).toHaveBeenCalledWith(200);
   });

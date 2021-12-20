@@ -62,7 +62,8 @@ async function updateCourierCapacity(id, newLoad) {
     { id },
     {
       current_load: currentLoadBeforeNewLoad || 0 + newLoad,
-    }
+    },
+    { returnDocument: 'after' }
   );
 
   return updatedCourier;

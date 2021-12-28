@@ -4,11 +4,19 @@ Hi Stuart team, here you can find my proposition of the solution to the second t
 
 ## Getting started
 
-First, get a local copy of this repo. Next, navigate to it's root folder, switch to a branch `solution-rafal` and install all dependencies
+First, get a local copy of this repo. Next, navigate to it's root folder, switch to a branch `solution-rafal` 
+
+```bash
+git checkout solution-rafal
+```
+
+and install all dependencies
 
 ```bash
 npm i
 ```
+
+Next, make sure you are running your local instance of [MongoDB](https://www.mongodb.com/)
 
 To run service in development mode use
 
